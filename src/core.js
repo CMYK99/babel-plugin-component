@@ -138,7 +138,7 @@ module.exports = function core(defaultLibraryName) {
       const file = (path && path.hub && path.hub.file) || (state && state.file);
       if (!types.isIdentifier(node[prop])) return;
       if (specified[node[prop].name]) {
-        node[prop] = importMethod(node[prop].name, file, state.opts); // eslint-disable-line
+        node[prop] = importMethod(specified[node[prop].name], file, state.opts); // eslint-disable-line
       }
     }
 
